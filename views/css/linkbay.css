@@ -1,0 +1,138 @@
+/* LinkBay back office styles (minimal, PrestaShop standard look). */
+
+.linkbay-panel {
+    margin-bottom: 1.5rem;
+}
+
+.linkbay-panel .card-header {
+    font-weight: 600;
+}
+
+.linkbay-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.linkbay-badge--success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.linkbay-badge--danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.linkbay-badge--warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.linkbay-table td,
+.linkbay-table th {
+    vertical-align: middle;
+}
+
+.linkbay-cron-url {
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.linkbay-form-group--inline {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Visual dashboard: checklist of problems to fix. */
+
+.linkbay-problem-summary {
+    margin-bottom: 1rem;
+}
+
+.linkbay-checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linkbay-checklist__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid #f0ad4e;
+    border-radius: 0.25rem;
+    background: #fffdf7;
+    margin-bottom: 0.75rem;
+}
+
+.linkbay-checklist__icon {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #f0ad4e;
+}
+
+.linkbay-checklist__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.linkbay-checklist__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #363a41;
+}
+
+.linkbay-checklist__description {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.linkbay-checklist__actions {
+    flex: 0 0 auto;
+}
+
+.linkbay-checklist__actions form {
+    margin: 0;
+}
+
+.linkbay-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.linkbay-empty-state__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #d4edda;
+    color: #155724;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.linkbay-empty-state__title {
+    color: #155724;
+    margin-bottom: 0.5rem;
+}
+
+.linkbay-empty-state__text {
+    color: #6c757d;
+    margin-bottom: 1.25rem;
+}

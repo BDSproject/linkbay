@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prestashop
+      MYSQL_USER: prestashop
+      MYSQL_PASSWORD: prestashop
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  prestashop:
+    image: prestashop/prestashop:8.2-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PS_DOMAIN: localhost:8080
+      DB_SERVER: db
+      DB_USER: prestashop
+      DB_PASSWD: prestashop
+      DB_NAME: prestashop
+      ADMIN_MAIL: admin@beassisted.fr
+      ADMIN_PASSWD: admin123456
+      ADMIN_FIRSTNAME: Matthieu
+      ADMIN_LASTNAME: Boisdur-Salbris
+      PS_INSTALL_AUTO: "1"
+      PS_ERASE_DB: "0"
+      PS_FOLDER_ADMIN: admin
+      PS_ENABLE_SSL: "0"
+    ports:
+      - "8080:80"
+    volumes:
+      # Bind the module source straight into the shop for live development.
+      - ./:/var/www/html/modules/linkbay
+      - ps_data:/var/www/html
+
+volumes:
+  db_data:
+  ps_data:

@@ -1,0 +1,24 @@
+includes:
+    - %currentWorkingDirectory%/vendor/prestashop/php-dev-tools/phpstan/ps-module-extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - linkbay.php
+        - controllers
+        - src
+    excludePaths:
+        - vendor
+        - views
+        - translations
+        - sql
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        # PrestaShop core declares Context sub-properties as nullable although they are
+        # always populated once the module runs inside the framework.
+        - '#Cannot call method [a-zA-Z]+\(\) on Link\|null\.#'
+        - '#Cannot call method [a-zA-Z]+\(\) on Cookie\|null\.#'
+        - '#Cannot call method [a-zA-Z]+\(\) on Smarty\|null\.#'
+        - '#Cannot access property \$[a-zA-Z]+ on Context\|null\.#'
+        - '#Cannot access property \$id on Language\|PrestaShopBundle\\Install\\Language\|null\.#'

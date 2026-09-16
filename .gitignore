@@ -1,0 +1,8 @@
+/node_modules/
+/vendor/
+/composer.lock
+/.php-cs-fixer.cache
+/deepseek-harness/
+.DS_Store
+/local.html
+/PORTFOLIO-LINKBAY.md

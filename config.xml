@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>linkbay</name>
+    <displayName><![CDATA[LinkBay]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Connects PrestaShop to eBay: import active listings and synchronize stock bidirectionally.]]></description>
+    <author><![CDATA[Beassisted]]></author>
+    <tab><![CDATA[market_place]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall this module? All LinkBay tables and settings will be removed.]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+</module>
